@@ -24,6 +24,9 @@ public class SimpleRecyclerView extends RecyclerView {
     }
 
     public void setOnItemAction(OnItemActionListener onItemAction) {
-        ((SimpleAdapter) this.getAdapter()).setHandler(onItemAction);
+        if (this.getAdapter() != null && this.getAdapter() instanceof SimpleAdapter) {
+            SimpleAdapter adapter = ((SimpleAdapter) this.getAdapter());
+            adapter.setHandler(onItemAction);
+        }
     }
 }
