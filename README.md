@@ -24,7 +24,7 @@ Include the library in your ``app/build.gradle``
 
 ```groovy
 dependencies{
-    compile 'com.github.tuanbaros:item-handle:v0.1'
+    compile 'com.github.tuanbaros:item-handle:master-SNAPSHOT'
 }
 ```
 
@@ -102,5 +102,8 @@ public class SampleAdapter extends SimpleAdapter {
 ```
 
 ### Note
-  You only need ``override`` method you want in ``onTap, onLongTap, onDoubleTap``. Happy coding!
 
+1. You must call ``super.onBindViewHolder(holder, position);`` in ``onBindViewHolder()`` of your
+adapter :)
+
+2. You only need ``override`` method you want in ``onTap, onLongTap, onDoubleTap``. Happy coding!
