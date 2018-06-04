@@ -103,7 +103,7 @@ public class SampleAdapter extends SimpleAdapter {
 
 ### Note
 
-1. You must call ``super.onBindViewHolder(holder, position);`` in ``onBindViewHolder()`` of your
+1. You should call ``super.onBindViewHolder(holder, position);`` in ``onBindViewHolder()`` of your
 adapter :)
 
 2. You only need ``override`` method you want in ``onTap, onLongTap, onDoubleTap``. Happy coding!
